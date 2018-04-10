@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="it.markedapp.convertitoreditemperatura.MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="342dp"
+        android:layout_height="93dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Convertitore di Temperatura"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:text="Da °C a °F"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvCelsius"
+        android:layout_width="87dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:text="Celsius"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/tempCelsius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="19dp" />
+
+    <EditText
+        android:id="@+id/tempCelsius"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Temperatura?"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/tvUnitCelsius"
+        app:layout_constraintStart_toEndOf="@+id/tvCelsius"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <TextView
+        android:id="@+id/tvUnitCelsius"
+        android:layout_width="75dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="52dp"
+        android:text="°C"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tempCelsius"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+        android:gravity="start"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/tvUnitFahreneit"
+        android:layout_width="57dp"
+        android:layout_height="37dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="17dp"
+        android:text="°F"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTempFahreneit"
+        app:layout_constraintTop_toBottomOf="@+id/tvUnitCelsius"
+        android:gravity="start" />
+
+    <TextView
+        android:id="@+id/tvFahreneit"
+        android:layout_width="88dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Fahreneit"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCelsius"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tvTempFahreneit"
+        android:layout_width="144dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="17dp"
+        app:layout_constraintStart_toEndOf="@+id/tvFahreneit"
+        app:layout_constraintTop_toBottomOf="@+id/tempCelsius"
+        android:layout_marginLeft="33dp" />
+
+    <Button
+        android:id="@+id/btnConverti"
+        android:layout_width="177dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:onClick="converti"
+        android:text="Converti"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTempFahreneit" />
+
+</android.support.constraint.ConstraintLayout>

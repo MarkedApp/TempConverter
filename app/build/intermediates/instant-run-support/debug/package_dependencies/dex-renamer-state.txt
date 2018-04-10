@@ -1,0 +1,4 @@
+#Fri Mar 16 10:12:02 GMT+01:00 2018
+base.0=C\:\\Users\\Utente\\AndroidStudioProjects\\Convertitoreditemperatura\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
